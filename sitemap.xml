@@ -1,0 +1,56 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 홈 -->
+  <url>
+    <loc>{{ '/' | absolute_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 포스트 -->
+  {% for post in site.posts %}{% unless post.sitemap == false %}
+  <url>
+    <loc>{{ post.url | absolute_url }}</loc>
+    {% if post.last_modified_at %}<lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% else %}<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% endif %}<changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endunless %}{% endfor %}
+
+  <!-- 내비게이션 탭 (about, categories, tags, archives) -->
+  {% for tab in site.tabs %}{% unless tab.sitemap == false %}
+  <url>
+    <loc>{{ tab.url | absolute_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endunless %}{% endfor %}
+
+  <!-- 카테고리 개별 페이지 -->
+  {% for page in site.pages %}{% if page.url contains '/categories/' and page.url != '/categories/' %}
+  <url>
+    <loc>{{ page.url | absolute_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  {% endif %}{% endfor %}
+
+  <!-- 태그 개별 페이지 -->
+  {% for page in site.pages %}{% if page.url contains '/tags/' and page.url != '/tags/' %}
+  <url>
+    <loc>{{ page.url | absolute_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  {% endif %}{% endfor %}
+
+</urlset>
