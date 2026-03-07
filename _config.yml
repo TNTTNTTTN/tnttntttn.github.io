@@ -107,6 +107,7 @@ cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "https://avatars.githubusercontent.com/u/103098746?v=4"
+logo: /assets/img/favicons/favicon-96x96.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
