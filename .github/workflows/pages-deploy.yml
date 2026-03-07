@@ -123,7 +123,7 @@ jobs:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
         run: |
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X POST "https://api.indexnow.org/indexnow" \
+            -X POST "https://www.bing.com/indexnow" \
             -H "Content-Type: application/json; charset=utf-8" \
             -d "{
               \"host\": \"tnttntttn.github.io\",
