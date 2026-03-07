@@ -122,14 +122,17 @@ jobs:
         env:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
         run: |
+          cat > /tmp/indexnow.json <<EOF
+          {
+            "host": "tnttntttn.github.io",
+            "key": "${INDEXNOW_KEY}",
+            "keyLocation": "https://tnttntttn.github.io/${INDEXNOW_KEY}.txt",
+            "urlList": ${{ steps.changed.outputs.url_array }}
+          }
+          EOF
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
             -X POST "https://www.bing.com/indexnow" \
             -H "Content-Type: application/json; charset=utf-8" \
-            -d "{
-              \"host\": \"tnttntttn.github.io\",
-              \"key\": \"${INDEXNOW_KEY}\",
-              \"keyLocation\": \"https://tnttntttn.github.io/${INDEXNOW_KEY}.txt\",
-              \"urlList\": ${{ steps.changed.outputs.url_array }}
-            }")
+            -d @/tmp/indexnow.json)
           echo "IndexNow HTTP $HTTP_STATUS"
           [[ "$HTTP_STATUS" == "200" || "$HTTP_STATUS" == "202" ]] || exit 1
