@@ -1,0 +1,27 @@
+@startuml
+
+@startuml
+skinparam rectangle {
+    BorderColor #336699
+}
+
+node "지상국" as GS
+
+rectangle "OBC SW" {
+    rectangle "Application Layer\n(임무 로직 / 자세제어 / 페일세이프)" as APP
+    rectangle "이벤트 드리븐\n(센서 인터럽트 / IPC)" as EVT
+    rectangle "파이프-필터\n(RF 수신→파싱→검증→디코딩)" as PIPE
+    rectangle "HAL" as HAL
+}
+
+rectangle "Hardware\n(IMU / 통신모듈 / 액추에이터)" as HW
+
+GS <--> PIPE : TC/TM (클라이언트-서버)
+APP -down-> EVT
+APP -down-> PIPE
+EVT -down-> HAL
+PIPE -down-> HAL
+HAL -down-> HW
+@enduml
+
+@enduml

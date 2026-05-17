@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="58px" preserveAspectRatio="none" style="width:807px;height:58px;" version="1.1" viewBox="0 0 807 58" width="807px" zoomAndPan="magnify"><defs><filter height="300%" id="f1jhn97tlxysj3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[26db52ab9c1c9ce671d7de92d530c650]
+entity RF--><rect fill="#FEFECE" filter="url(#f1jhn97tlxysj3)" height="39.0679" style="stroke: #000000; stroke-width: 1.5;" width="66" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="16" y="32.9659">RF 수신</text><!--MD5=[330c07a90c66bc38691bd82407d09d37]
+entity SYNC--><rect fill="#FEFECE" filter="url(#f1jhn97tlxysj3)" height="39.0679" style="stroke: #000000; stroke-width: 1.5;" width="102" x="156" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="166" y="32.9659">프레임 동기화</text><!--MD5=[b4c3d4b501d94f6b92ee78cf7f7c285b]
+entity ECC--><rect fill="#FEFECE" filter="url(#f1jhn97tlxysj3)" height="39.0679" style="stroke: #000000; stroke-width: 1.5;" width="107" x="329.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="339.5" y="32.9659">오류 검출/정정</text><!--MD5=[014bc5ca5401618d6f7935a2c849fb3a]
+entity PARSE--><rect fill="#FEFECE" filter="url(#f1jhn97tlxysj3)" height="39.0679" style="stroke: #000000; stroke-width: 1.5;" width="76" x="555" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="565" y="32.9659">패킷 파싱</text><!--MD5=[e5c453a804329e55b26bc32e49260a1c]
+entity DECODE--><rect fill="#FEFECE" filter="url(#f1jhn97tlxysj3)" height="39.0679" style="stroke: #000000; stroke-width: 1.5;" width="89" x="707.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="717.5" y="32.9659">명령 디코딩</text><!--MD5=[ebbcb31c22b037ebedc1d293d38b6177]
+link RF to SYNC--><path d="M72.19,27.5 C94.51,27.5 124.5,27.5 150.53,27.5 " fill="none" id="RF-&gt;SYNC" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="155.68,27.5,146.68,23.5,150.68,27.5,146.68,31.5,155.68,27.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="47" x="90.5" y="20.397">raw bits</text><!--MD5=[1d20b4009f3dca66d7beaa6bd6589aa0]
+link SYNC to ECC--><path d="M258.38,27.5 C279.04,27.5 302.99,27.5 324.33,27.5 " fill="none" id="SYNC-&gt;ECC" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="329.41,27.5,320.41,23.5,324.41,27.5,320.41,31.5,329.41,27.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="35" x="276.25" y="20.397">frame</text><!--MD5=[b2e5e1aa5c46b113d595a574aefd9678]
+link ECC to PARSE--><path d="M436.54,27.5 C471.6,27.5 516.84,27.5 549.65,27.5 " fill="none" id="ECC-&gt;PARSE" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="554.8,27.5,545.8,23.5,549.8,27.5,545.8,31.5,554.8,27.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="82" x="454.75" y="20.397">verified frame</text><!--MD5=[48670629b4a0bd3c30642b99d80dca48]
+link PARSE to DECODE--><path d="M631.08,27.5 C652.44,27.5 679.32,27.5 702.31,27.5 " fill="none" id="PARSE-&gt;DECODE" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="707.46,27.5,698.46,23.5,702.46,27.5,698.46,31.5,707.46,27.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="40" x="649.25" y="20.397">packet</text><!--MD5=[7513a262d4587de7a49a158626dff47a]
+@startuml
+rectangle "RF 수신" as RF
+rectangle "프레임 동기화" as SYNC
+rectangle "오류 검출/정정" as ECC
+rectangle "패킷 파싱" as PARSE
+rectangle "명령 디코딩" as DECODE
+
+RF -right-> SYNC : raw bits
+SYNC -right-> ECC : frame
+ECC -right-> PARSE : verified frame
+PARSE -right-> DECODE : packet
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 19:22:07 KST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 21.0.10+7-Ubuntu-124.04
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

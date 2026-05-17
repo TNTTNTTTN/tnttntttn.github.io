@@ -15,6 +15,7 @@ gem "wdm", "~> 0.2.0", :platforms => [:windows]
 
 group :jekyll_plugins do
   gem 'jekyll-linkpreview'
+  gem 'jekyll-plantuml'
 end
 
 gem 'http-cookie', '~> 1.0.5'

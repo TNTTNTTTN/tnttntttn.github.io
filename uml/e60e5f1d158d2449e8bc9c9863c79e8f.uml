@@ -1,0 +1,11 @@
+@startuml
+
+@startuml
+node "지상국\n(Ground Station)" as GS
+node "OBC SW\n(위성)" as OBC
+
+GS -right-> OBC : 명령 (Telecommand)
+OBC -left-> GS : 텔레메트리 (Telemetry)
+@enduml
+
+@enduml

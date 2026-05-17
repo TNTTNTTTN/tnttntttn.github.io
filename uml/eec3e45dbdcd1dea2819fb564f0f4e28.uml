@@ -1,0 +1,16 @@
+@startuml
+
+@startuml
+rectangle "RF 수신" as RF
+rectangle "프레임 동기화" as SYNC
+rectangle "오류 검출/정정" as ECC
+rectangle "패킷 파싱" as PARSE
+rectangle "명령 디코딩" as DECODE
+
+RF -right-> SYNC : raw bits
+SYNC -right-> ECC : frame
+ECC -right-> PARSE : verified frame
+PARSE -right-> DECODE : packet
+@enduml
+
+@enduml

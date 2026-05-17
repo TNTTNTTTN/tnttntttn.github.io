@@ -1,0 +1,14 @@
+@startuml
+
+@startuml
+participant "센서/인터럽트" as SRC
+participant "이벤트 큐" as QUEUE
+participant "이벤트 핸들러" as HANDLER
+participant "Application" as APP
+
+SRC -> QUEUE : 이벤트 발행
+QUEUE -> HANDLER : 디스패치
+HANDLER -> APP : 처리 결과 전달
+@enduml
+
+@enduml

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="88px" preserveAspectRatio="none" style="width:440px;height:88px;" version="1.1" viewBox="0 0 440 88" width="440px" zoomAndPan="magnify"><defs><filter height="300%" id="fmdc6g9bf1dni" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[66223a172ae9ceac77f27ebc9b631536]
+entity GS--><polygon fill="#FEFECE" filter="url(#fmdc6g9bf1dni)" points="6,18,16,8,156,8,156,66.1358,146,76.1358,6,76.1358,6,18" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="146" x2="155" y1="18" y2="9"/><line style="stroke: #000000; stroke-width: 1.5;" x1="6" x2="146" y1="18" y2="18"/><line style="stroke: #000000; stroke-width: 1.5;" x1="146" x2="146" y1="18" y2="76.1358"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="21" y="42.9659">지상국</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="21" y="62.0339">(Ground Station)</text><!--MD5=[b8a25ba2b03820baa183eb0c67c7262e]
+entity OBC--><polygon fill="#FEFECE" filter="url(#fmdc6g9bf1dni)" points="324,18,334,8,418,8,418,66.1358,408,76.1358,324,76.1358,324,18" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="408" x2="417" y1="18" y2="9"/><line style="stroke: #000000; stroke-width: 1.5;" x1="324" x2="408" y1="18" y2="18"/><line style="stroke: #000000; stroke-width: 1.5;" x1="408" x2="408" y1="18" y2="76.1358"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="54" x="339" y="42.9659">OBC SW</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="34" x="339" y="62.0339">(위성)</text><!--MD5=[480bdcbf354aeb091dd2fb0b6ce29006]
+link GS to OBC--><path d="M156.16,60.63 C163.83,62 171.55,63.17 179,64 C232.89,69.97 247.41,72.22 301,64 C306.8,63.11 312.79,61.83 318.7,60.32 " fill="none" id="GS-&gt;OBC" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="323.64,59.01,313.9138,57.4604,318.8084,60.2965,315.9723,65.1911,323.64,59.01" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="120" x="180" y="59.897">명령 (Telecommand)</text><!--MD5=[981cee5e3a6fb83d284b40d0192304f2]
+reverse link GS to OBC--><path d="M161.08,42 C213.41,42 279.96,42 323.94,42 " fill="none" id="GS&lt;-OBC" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="156.06,42,165.06,46,161.06,42,165.06,38,156.06,42" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="131" x="174.5" y="34.897">텔레메트리 (Telemetry)</text><!--MD5=[fc71e83a6f0f101b05155aa89b9f06b7]
+@startuml
+node "지상국\n(Ground Station)" as GS
+node "OBC SW\n(위성)" as OBC
+
+GS -right-> OBC : 명령 (Telecommand)
+OBC -left-> GS : 텔레메트리 (Telemetry)
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 19:22:07 KST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 21.0.10+7-Ubuntu-124.04
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,18 @@
+@startuml
+
+@startuml
+left to right direction
+
+rectangle "큐브위성 전체 (경계 1)" {
+    usecase "명령 수신" as UC1
+    usecase "자세 제어" as UC2
+    usecase "데이터 송신" as UC3
+}
+actor "지상국" as GS
+actor "태양/중력" as ENV
+
+GS --> UC1
+GS --> UC3
+ENV --> UC2
+
+@enduml

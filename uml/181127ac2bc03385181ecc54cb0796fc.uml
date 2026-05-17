@@ -1,0 +1,25 @@
+@startuml
+
+@startuml
+left to right direction
+
+rectangle "OBC SW (경계 2)" {
+    usecase "명령 수신" as UC1
+    usecase "명령 처리" as UC2
+    usecase "데이터 송신" as UC3
+}
+actor "지상국" as GS
+actor "통신 서브시스템" as COMM
+actor "스케줄러" as SCH
+actor "DAQ" as DAQ
+
+GS --> UC1
+GS --> UC2
+GS --> UC3
+COMM --> UC1
+COMM --> UC2
+COMM --> UC3
+SCH --> UC2
+DAQ --> UC3
+
+@enduml

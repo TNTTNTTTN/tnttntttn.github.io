@@ -3,7 +3,7 @@
 
 plugins:
   - jekyll-linkpreview
-
+  - jekyll-plantuml
 # Import the theme
 theme: jekyll-theme-chirpy
 

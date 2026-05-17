@@ -1,0 +1,18 @@
+@startuml
+
+@startuml
+skinparam rectangle {
+    BackgroundColor #DDEEFF
+    BorderColor #336699
+}
+
+rectangle "Application Layer\n(임무 로직, 자세제어, 페일세이프)" as APP
+rectangle "Middleware Layer\n(이벤트 드리븐 / 파이프-필터)" as MW
+rectangle "HAL\n(Hardware Abstraction Layer)" as HAL
+rectangle "Hardware\n(센서, 통신모듈, 액추에이터)" as HW
+
+APP -down-> MW
+MW -down-> HAL
+HAL -down-> HW
+
+@enduml
