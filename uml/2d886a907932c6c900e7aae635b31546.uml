@@ -1,0 +1,14 @@
+@startuml
+
+@startuml
+[*] --> New
+New --> Ready : 메모리 할당 완료
+Ready --> Running : __(⑥)__ (스케줄러)
+Running --> Ready : __(⑦)__
+Running --> Waiting : __(⑨)__ 호출
+Waiting --> Ready : __(⑧)__
+Running --> Terminated : 실행 완료
+Terminated --> [*]
+@enduml
+
+@enduml
